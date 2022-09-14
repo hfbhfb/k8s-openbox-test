@@ -1,0 +1,45 @@
+{
+    "addr": ":9802",
+    "debug": true,
+    "node_id": 1,
+    "token_expired": 2,
+    "mysql": {
+        "alias": "",
+        "database": "",
+        "host": "",
+        "port": "",
+        "user": "",
+        "password": ""
+    },
+    "redis": {
+        "host": "",
+        "port": "",
+        "password": "",
+        "db": 0
+    },
+    "access": {
+        "access_key_id": "",
+        "access_key_secret": ""
+    },
+    "url": {
+        "blockchain_url": ""
+    },
+    "aliyun": {
+        "aliyunurl_shortmessage": "",
+        "aliyunurl_access_keyid": "",
+        "aliyunurl_access_keysecret": "",
+        "aliyunurl_end_point_name": "",
+        "aliyunurl_template_code": "",
+        "aliyunurl_signname": ""
+    },
+    "task": {
+        "block_times": "10 * * * * *"
+    },
+    "cors": [
+        ""
+    ],
+    "elasticsearch": {
+        "url": "",
+        "auth": ""
+    }
+}
