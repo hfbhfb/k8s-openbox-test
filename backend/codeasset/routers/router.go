@@ -3,6 +3,7 @@ package routers
 import (
 	"backend/codeasset/common/middleware/logger"
 	"embed"
+	"fmt"
 	"path"
 	"path/filepath"
 	"strings"
@@ -80,10 +81,17 @@ func feMw(urlPrefix string) gin.HandlerFunc {
 			urlPath = path.Join(urlPrefix, indexHtml)
 		}
 		urlPath = filepath.Join(fsBase, urlPath)
+		fmt.Println(urlPath)
+		fmt.Println(urlPath)
+		fmt.Println(urlPath)
 
 		f, err := fs.Open(urlPath)
 		if err != nil {
-			return
+			// 把 index.html 赋值过去
+			urlPath = path.Join(urlPrefix, indexHtml)
+			urlPath = filepath.Join(fsBase, urlPath)
+			f, _ = fs.Open(urlPath)
+			// return
 		}
 		fi, err := f.Stat()
 		if strings.HasSuffix(urlPath, ".html") {
