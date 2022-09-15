@@ -22,9 +22,9 @@ COPY --from=node /frontend/dist /backend/codeasset/routers/dist
 RUN go env -w GOPROXY="https://goproxy.cn,direct" && \
     go build 
 
-FROM busybox:1.35.0-glibc
+FROM debian:bookworm-20220912-slim
 WORKDIR /app
 COPY --from=golang /backend/backend /app/backend
-COPY --from=golang /backend/config-dev.json /app/config-dev.json
+COPY --from=golang /backend/config-dev.json /app/config-pro.json
 CMD ["./backend"]
 
