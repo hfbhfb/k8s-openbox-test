@@ -12,4 +12,5 @@ import (
 func VersionInfo(c *gin.Context) {
 
 	ginutils.WriteString(c, innhttpcode.STATUS_OK, NAME+":"+VERSION, nil)
+	return
 }

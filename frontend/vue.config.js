@@ -20,7 +20,7 @@ module.exports = {
         disableHostCheck: true,
         proxy:{
             '/api':{
-                target: 'http://localhost:9802',
+                target: 'http://localhost:1027',
                 changeOrigin: true
             }
         }
